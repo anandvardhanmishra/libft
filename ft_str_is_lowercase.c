@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/15 22:57:38 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/14 19:57:56 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 20:14:19 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_char_is_lowercase(char c)
 	return (0);
 }
 
-int	ft_str_is_lowercase(char *str)
+int			ft_str_is_lowercase(char *str)
 {
 	while (*str != '\0')
 	{
