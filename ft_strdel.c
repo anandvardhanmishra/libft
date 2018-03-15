@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 00:04:36 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/13 23:26:06 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 18:17:48 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void **)as);
+	if (as)
+		ft_memdel((void **)as);
 }

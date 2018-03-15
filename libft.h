@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 22:57:37 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/14 02:12:05 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 19:58:38 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,21 +51,21 @@ void				ft_putstr_fd(char const *s, int fd);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *s);
-int					ft_strcmp(char *s1, char *s2);
-char				*ft_strcpy(char *dst, char *src);
+int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
-char				*ft_strdup(const char *src);
+char				*ft_strdup(const char *s);
 int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-size_t				ft_strlen(char *str);
+size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-char				*ft_strncpy(char *dst, const char *src, size_t n);
+char				*ft_strncpy(char *dst, const char *src, unsigned int n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
@@ -87,5 +87,6 @@ int					ft_isupper(int c);
 int					ft_isspace(int c);
 char				*ft_strupcase(char *str);
 char				*ft_strlowcase(char *str);
+int					ft_str_is_lowercase(char *str);
 
 #endif

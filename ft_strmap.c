@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 00:38:37 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/14 02:05:32 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 18:29:13 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*tab;
 	size_t	size;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	size = ft_strlen(s);
 	tab = ft_strnew(size);

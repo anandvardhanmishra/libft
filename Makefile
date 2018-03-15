@@ -6,14 +6,12 @@
 #    By: amishra <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/13 23:57:43 by amishra           #+#    #+#              #
-#    Updated: 2018/03/14 02:11:16 by amishra          ###   ########.fr        #
+#    Updated: 2018/03/14 19:59:10 by amishra          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC 		= gcc
 CFLAGS 	= -Wall -Wextra -Werror
-AR 		= ar rc
-RANLIB	= ranlib 
 
 NAME	= libft.a
 HEAD	= libft.h
@@ -80,23 +78,22 @@ SRCS 	= ft_atoi.c \
 	  ft_isspace.c \
 	  ft_strupcase.c \
 	  ft_strlowcase.c \
+	  ft_str_is_lowercase.c \
 
 
-OBJS 	= $(SRC:.c=.o)
+OBJS 	= $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-		@$(CC) $(CFLAGS) -c $(SRCS)
-		@$(AR) $(NAME) $(OBJS)
-		@$(RANLIB) $(NAME)
+$(NAME): $(OBJS)
+		ar rc $(NAME) $(OBJS)
 
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJS)
 
 fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY: all clean fclean re

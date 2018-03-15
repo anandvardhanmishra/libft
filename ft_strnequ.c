@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 00:59:58 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/13 01:00:07 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 18:36:05 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int			ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if (!s1 || !s2)
+		return (0);
 	return (ft_strncmp(s1, s2, n) ? 0 : 1);
 }

@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 01:16:15 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/14 01:56:22 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 18:35:31 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s)
 	size_t	len;
 
 	start = 0;
+	if (!s)
+		return (NULL);
 	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
 		start++;
 	if (s[start] == '\0')

@@ -6,7 +6,7 @@
 /*   By: amishra <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 01:09:10 by amishra           #+#    #+#             */
-/*   Updated: 2018/03/14 00:43:18 by amishra          ###   ########.fr       */
+/*   Updated: 2018/03/14 19:13:00 by amishra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char				**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
+	if (!s)
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (ft_count_word(s, c)) + 1);
 	if (tab == NULL)
 		return (NULL);
@@ -63,10 +65,7 @@ char				**ft_strsplit(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
-			tab[k] = ft_strndup(s + j, i - j);
-			k++;
-		}
+			tab[k++] = ft_strndup(s + j, i - j);
 	}
 	tab[k] = NULL;
 	return (tab);
